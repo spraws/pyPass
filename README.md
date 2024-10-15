@@ -1,4 +1,4 @@
-(https://banner2.cleanpng.com/20190623/yp/kisspng-python-computer-icons-programming-language-executa-1713885634631.webp)
+[](https://banner2.cleanpng.com/20190623/yp/kisspng-python-computer-icons-programming-language-executa-1713885634631.webp)
 # pyPass
 ### A simple python based password manager.
 
@@ -14,3 +14,12 @@
 
 # DEMO
 ### Log In
+![](https://github.com/spraws/pyPass/blob/main/github-files/login.gif)
+
+### View Passwords
+![](https://github.com/spraws/pyPass/blob/main/github-files/view.gif)
+
+### Add New
+![](https://github.com/spraws/pyPass/blob/main/github-files/newpswd.gif)
+
+![](https://github.com/spraws/pyPass/blob/main/github-files/viewNew.gif)
