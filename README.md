@@ -7,7 +7,7 @@
 - View the stored passwords.
 
 # TO-DO
-- Encrypt JSON using AES. Currently the credentials are tsored in plain-text json, this is insecure as anyone can read it.
+- Encrypt JSON using AES. Currently the credentials are stored in plain-text json, this is insecure as anyone can read it.
 - Add a password generator.
 - Check stored passwords against rockyou.txt.
 
