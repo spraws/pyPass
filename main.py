@@ -12,6 +12,8 @@ import pyfiglet
 import json
 import os
 
+from cryptography.fernet import Fernet
+
 # Define a file to store the usernames and hashed passwords
 data_file = "password_manager.json"
 saved_passwords_file = "password_entries.json"
@@ -42,6 +44,35 @@ def save_passwords():
         
     with open(saved_passwords_file, 'w') as file:
         json.dump(saved_passwords, file)
+        
+        
+#Encrypt JSON
+def generate_key():
+    if not os.path.exists('pypass.key'):
+        key = Fernet.generate_key()
+        with open ('pypass.key', 'wb') as pypass_key:
+            pypass_key.write(key)
+        
+def load_key():
+    return open('pypass.key', 'rb').read()
+
+def encrypt_json(data):
+    key = load_key()
+    fernet = Fernet(key)
+    json_data = json.dumps(data)
+    encrypt =  fernet.encrypt(encrypt_json).encode()
+    return encrypt
+
+def decrypt(encrypted_data):
+    key = load_key()
+    fernet = Fernet(key)
+    decrypt =  fernet.decrypt(encrypted_data).decode()
+    return json.loads(decrypt)
+
+def write_encrypted_data():
+    if os
+    encrypted_data =  encrypt_json(data)
+
 
 def welcome():
     welcome_msg = pyfiglet.figlet_format("pyPass")
